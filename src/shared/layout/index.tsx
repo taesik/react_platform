@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from './../../shared/reducers';
 import ErrorBoundaryRoute from '../error/error-boundary-route';
-import { Router, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import Main from '../../views/main/main';
 import '../../assets/libs/bootstrap/bootstrap.min.css';
 import '../../assets/libs/bootstrap/bootstrap-icon.min.css';
@@ -10,8 +10,6 @@ import '../../assets/css/styles.css';
 import { Login } from '../../../src/views/login';
 import { Dashboard } from '../../views/dashboard/dashboard';
 import { SearchResults } from '../../views/result/search-result';
-import { MainTmp } from '../../views/main/mainTmp';
-import WriteDashboard from '../../views/admin/write-dashboard';
 import { KeywordNews } from '../../views/keyword/keyword-news';
 import { AnalysisReport } from '../../views/report/analysis-report';
 import { AnalysisReportDetail } from '../../views/report/analysis-report-detail';
@@ -24,19 +22,10 @@ import Footer from '../../views/component/footer/footer';
 
 export interface ITemplateProps extends StateProps, DispatchProps {}
 
-export const Index = (props: ITemplateProps) => {
-
-  const [user, setUser] = useState("");
-
-  useEffect(() => {
-
-  }, []);
-
+export const Index = () => {
   return (
     <>
-
       <Header match={undefined} history={undefined} location={undefined}  />
-
       <Switch>
         <ErrorBoundaryRoute path='/login' component={Login} />
         {/*<ErrorBoundaryRoute path='/main' component={Main} />*/}

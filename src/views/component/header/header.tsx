@@ -9,19 +9,15 @@ export interface IHeaderProps extends StateProps, DispatchProps, RouteComponentP
 
 export const Header = (props:IHeaderProps) => {
 
-  const history = useHistory();
   const location = useLocation();
 
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef,false);
   const onClick = () => setIsActive(!isActive);
 
-  useEffect(()=>{
     // console.log('header reducer : '+ JSON.stringify(props.rcmdKeywords));
-  })
 
   const isCurrentMain =():boolean=>{
-    // console.log("curr path : "+location.pathname);
     if (location.pathname ==="/main"){
       return true;
     }else {
@@ -70,9 +66,6 @@ export const Header = (props:IHeaderProps) => {
             </li>
             <li className="nav-item">
               <Link className="" aria-current="page" to="/analysis-report">분석보고서</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="" aria-current="page" to="">시멘틱검색</Link>
             </li>
           </ul>
 
@@ -128,7 +121,6 @@ export const Header = (props:IHeaderProps) => {
                     <ul>
                       <li><a href="#">추천 키워드 설정</a></li>
                       <li><a href="#">뉴스 콘텐츠 관리</a></li>
-                      <li><a href="#">시맨틱 콘텐츠 관리</a></li>
                       <li><a href="#">대시보드 작성</a></li>
                       <li><a href="#">보고서 작성</a></li>
                     </ul>
@@ -201,9 +193,7 @@ export const Header = (props:IHeaderProps) => {
                   <li className="nav-item">
                     <Link className="" aria-current="page" to="/analysis-report">분석보고서</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="" aria-current="page" to="">시멘틱검색</Link>
-                  </li>
+
                 </ul>
 
                 <div className="dropdown">

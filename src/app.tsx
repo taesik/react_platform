@@ -91,7 +91,6 @@ export const App = (props: IAppProps) => {
                                       "/result-keyword-news",
                                       "/admin-keyword",
                                       "/admin-dashboard"]} component={Index} />//에러시 페이지
-            <ErrorBoundaryRoute path="/mindmap" component={MindMapPage} />
             <Redirect from="/" to={"/main"} />
 
           </Switch>
