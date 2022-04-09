@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../shared/reducers';
-import { INewsListProps as Props } from '../component/news/news-list';
 import { connect } from 'react-redux';
-import NewsList,{ INewsListProps } from '../component/news/news-list';
+import { INewsListProps } from '../component/news/news-list';
 import {
         getSearchPlaceholder,
         getRcmdKeyword,
         getKeywordNewsList,
         } from '../../shared/reducers/api';
 import {
-  KB_LOGO,
-  KB,
   YOUTUBE,
   FACEBOOK,
   INSTAGRAM,
@@ -40,10 +37,7 @@ export const MainTmp = (props:IMainProps) => {
   );
 
   const keywords:string[] = [
-    "KB국민카드",
-    "KB Pay",
     "고객정보 유출",
-    "신용카드 추천",
     "대박 상품",
     "해외 직구"
   ];
@@ -124,7 +118,6 @@ export const MainTmp = (props:IMainProps) => {
             <div className="row">
               <div className="col-12 mb-2 mb-md-4">
                 <a className="text-decoration-none" href="#">
-                  <img className="logo" src={KB_LOGO}/>
                 </a>
               </div>
 

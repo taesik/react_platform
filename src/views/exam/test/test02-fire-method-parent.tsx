@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {  useRef } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../../shared/reducers';
 import Test02FireMethodChild from './test02-fire-method-child';
 
 // 리덕스/액션함수를 포함하는 인터페이스 (명명규칙: I + 컴포넌트명 + Porps)

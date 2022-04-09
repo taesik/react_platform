@@ -63,11 +63,11 @@ const DashboardItem: React.FC<IProps> = () => {
               </ul>
             </div>
             <div className="card-item-tag txt-post">
-              <span>#KB국민카드</span>
-              <span>#KB국민카드</span>
-              <span>#KB국민카드</span>
-              <span>#KB국민카드</span>
-              <span>#KB국민카드</span>
+              <span>#</span>
+              <span>#</span>
+              <span>#</span>
+              <span>#</span>
+              <span>#</span>
             </div>
           </div>
         </div>

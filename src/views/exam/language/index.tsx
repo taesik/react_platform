@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import ErrorBoundaryRoute from 'shared/error/error-boundary-route';
+import ErrorBoundaryRoute from './../../../shared/error/error-boundary-route';
 import { ClassArgs } from './class-args/class-args';
 import ValueScopes from './value-scope/value-scope';
 

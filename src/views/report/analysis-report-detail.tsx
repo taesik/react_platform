@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from '../../shared/reducers';
-import {
-  KB_LOGO,
-} from '../img';
 
 export const AnalysisReportDetail = (props: {history}) => {
 

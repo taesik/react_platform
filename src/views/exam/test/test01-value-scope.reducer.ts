@@ -1,6 +1,4 @@
 import moment from 'moment';
-import axios from 'axios';
-import { FAILURE, SUCCESS } from '../../../shared/reducers/action-type.util';
 
 export const ACTION_TYPES = {
   TEST: 'exam/test/test01/TEST',

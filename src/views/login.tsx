@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-// import LogoKepcoMain from 'assets/img/logo_kepco_main.svg';
-// import IconLock from 'assets/img/icon_lock.svg';
 import { IRootState } from '../shared/reducers';
 import { getSession, login } from '../shared/reducers/authentication';
 import { connect } from 'react-redux';
@@ -11,8 +9,6 @@ export interface ILoginProps extends StateProps, DispatchProps, RouteComponentPr
 
 export const Login = (props: ILoginProps) => {
 
-  useEffect(()=>{
-  },[]);
 
   const [loginInfo, setLoginInfo] = useState({
     id: '',
@@ -59,7 +55,7 @@ export const Login = (props: ILoginProps) => {
     <>
       <section className="login-left">
 
-        <p>kboogle</p>
+        <p>k</p>
       </section>
       <section className="login-right">
         <div className="logo">

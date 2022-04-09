@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
 import { IKeywordProps as IProps} from './keyword-rcmd-list';

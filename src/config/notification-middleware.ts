@@ -2,8 +2,6 @@ import { isPromise } from './../shared/util/promise-utils';
 import { toast } from 'react-toastify';
 
 const addErrorAlert = (message, key?, data?) => {
-  key = key ? key : message;
-  // toast.error(translate(key, data));
   toast.error(message);
 };
 export default () => next => action => {
@@ -34,7 +32,6 @@ export default () => next => action => {
         });
         if (alert) {
           const alertParam = alertParams;
-          // toast.success(translate(alert, { param: alertParam }));
           toast.success(alert);
         }
       }

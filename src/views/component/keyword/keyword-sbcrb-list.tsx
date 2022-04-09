@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
-import KeywordItem from './keyword-item'
 
 export interface IKeywordProps {
   keywords: string[],

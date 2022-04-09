@@ -1,6 +1,4 @@
 
-import KB_LOGO from '../assets/img/logo/kb_logo.png';
-import KB from '../assets/img/icon/kb.png';
 import YOUTUBE from '../assets/img/icon/youtube.png';
 import FACEBOOK from '../assets/img/icon/facebook.png';
 import INSTAGRAM from '../assets/img/icon/instagram.png';
@@ -27,8 +25,6 @@ export enum CHANNEL_IMG {
 }
 
 export  {
-  KB_LOGO,
-  KB,
   YOUTUBE,
   FACEBOOK,
   INSTAGRAM,

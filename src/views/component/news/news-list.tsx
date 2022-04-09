@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
 import { NewsItem } from './news-item';
-import { YOUTUBE } from '../../../views/img';
 import { INews } from '../../../shared/model/news.model';
 
 export interface INewsListProps {

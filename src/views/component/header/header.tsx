@@ -1,8 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-  KB_LOGO,
-  KB,
-} from '../../../views/img';
+import React, { useEffect, useRef  } from 'react';
 import { Link, RouteComponentProps, useHistory, useLocation } from 'react-router-dom';
 import { useDetectOutsideClick } from './useDetectOutsideClick';
 import { IRootState } from '../../../shared/reducers';
@@ -50,7 +46,6 @@ export const Header = (props:IHeaderProps) => {
 
         <div className="navbar-logo">
           <Link to="/main">
-            <img className="logo" src={KB_LOGO} />
           </Link>
         </div>
 
@@ -100,7 +95,7 @@ export const Header = (props:IHeaderProps) => {
                   <div className="my-box">
                     <h5>나의 키워드<span className="edit">edit</span></h5>
                     <div className="keyword-box">
-                      <span>#KB국민카드</span><span>COVID-19</span><span>올댓카드</span><span>#KB국민카드</span><span>#KB국민카드</span>
+                      <span>#</span><span>19</span><span></span><span>#</span><span>#</span>
                     </div>
                   </div>
                 </div>
@@ -174,7 +169,6 @@ export const Header = (props:IHeaderProps) => {
             <div className="col-lg-3 col-xl-3 col-xxl-3">
               <div className="navbar-logo">
                 <Link to="/main">
-                  <img className="logo" src={KB_LOGO} />
                 </Link>
               </div>
             </div>
@@ -230,7 +224,7 @@ export const Header = (props:IHeaderProps) => {
                         <div className="my-box">
                           <h5>나의 키워드<span className="edit">edit</span></h5>
                           <div className="keyword-box">
-                            <span>#KB국민카드</span><span>COVID-19</span><span>올댓카드</span><span>#KB국민카드</span><span>#KB국민카드</span>
+                            <span>#</span><span>1</span><span>2</span><span>#</span><span>#</span>
                           </div>
                         </div>
                       </div>

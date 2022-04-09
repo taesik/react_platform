@@ -1,7 +1,6 @@
-import React, {FunctionComponent, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import { Modal} from "react-bootstrap";
 import DateRangePicker from "react-bootstrap-daterangepicker";
-import moment from "moment";
 
 /**
  * 이 하단 임포트는 안할경우 daterangepicker의 캘린더가 출력되지않는다.

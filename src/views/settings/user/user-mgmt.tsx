@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../../shared/reducers';
 import UserList from './user-list';
 import UserUpdateList from './user-update-list';
 

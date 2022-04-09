@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../../shared/reducers';
 import { setSettingUserAdd } from './user.reducer';
 
 export interface UserModalAdd {

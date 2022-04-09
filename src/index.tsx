@@ -6,18 +6,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './app';
-import initStore from './config/store';
+import initStore from './../src/config/store';
 import reportWebVitals from './reportWebVitals';
 import ErrorBoundary from "./shared/error/error-boundary";
-import { clearAuthentication } from './shared/reducers/authentication';
 import setupAxiosInterceptors from './config/axios-interceptor';
 import { loadIcons } from './config/icon-loader';
 import { initPublish } from './init-publish';
 import { hideLoading, showLoading } from './shared/reducers/axios';
-import { getSearchPlaceholder,
-
-        getRcmdKeyword} from './shared/reducers/api';
-
 const store = initStore(); // 스토어 셋팅
 
 // 사용자 세션 확인 및 초기화

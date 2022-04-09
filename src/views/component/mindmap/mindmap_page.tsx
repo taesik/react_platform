@@ -1,11 +1,5 @@
 import MindElixir,{ E } from "mind-elixir"
 import React, {useEffect, useState} from "react";
-import ReactDOM from 'react-dom';
-
-import axios from "axios";
-import { connect } from 'react-redux';
-import { IRootState } from '../../../shared/reducers';
-import PinkSwichButton from '../button/pinkSwichButton';
 
 
 

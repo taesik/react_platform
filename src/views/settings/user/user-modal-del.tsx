@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../../shared/reducers';
 import { IUser } from '../../../shared/model/user.model';
 import { setSettingUserDel } from './user.reducer';
 

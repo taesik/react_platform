@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
-import KeywordItem from './keyword-item'
-import {KeywordSbcrbList} from "./keyword-sbcrb-list";
-import {Button, Modal} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import KeywordsModal from '../popup/keywords-modal';
 
 export interface IKeywordProps {

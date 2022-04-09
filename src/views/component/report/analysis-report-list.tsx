@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import AnalysisReportItem from './analysis-report-item';
-import { RouteComponentProps } from 'react-router-dom';
-import { IRootState } from '../../../shared/reducers';
-import { connect } from 'react-redux';
 
 const AnalysisReportList = (props: { moveFunc }) => {
 
-  const[keywordArr, setkeywordArr] = useState(
-
-  );
 
   const moveAnalysisReportDetail = () =>(
     props.moveFunc()

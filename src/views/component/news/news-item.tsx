@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
 import { INewsListProps, INewsListProps as Props } from './news-list';
-import SwichButton from '../button/swichButton';
 import {
   CHANNEL_IMG,
   YOUTUBE,

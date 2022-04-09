@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useHistory, Link, RouteComponentProps } from 'react-router-dom';
-import { IRootState } from '../../../shared/reducers';
-import { connect } from 'react-redux';
-import { AnalysisReportDetail } from '../../report/analysis-report-detail';
+import React from 'react';
 
 
 const AnalysisReportItem = (props: { moveFunc }) => {
@@ -28,16 +24,16 @@ const AnalysisReportItem = (props: { moveFunc }) => {
             </div>
 
             <div className="d-inline-block">
-              <h5 className="c-title">국민카드 해지방어 프로모션</h5>
+              <h5 className="c-title">promotion</h5>
               <p className="c-desc">해지방어 키워드와 해지방어 이벤트 접속자와의 관계를 파악 평균 이벤트 접속자보다 많은 이벤트 접속자 유발</p>
                 <ul className="c-desc">
                   <span><i className="bi bi-clock"></i></span>
                   <li>2021-07-01 09:00:00</li>
                 </ul>
                 <ul className="c-tag">
-                  <li><span>#</span>KB국민카드</li>
+                  <li><span>#</span>K</li>
                   <li><span>#</span>COVID-19</li>
-                  <li><span>#</span>2022년도 경제전망</li>
+                  <li><span>#</span>2022</li>
                 </ul>
             </div>
           </div>

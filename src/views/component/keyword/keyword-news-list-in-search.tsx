@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import KeywordNewsItem from './keyword-news-item';
-import {KeywordRcmdList} from "./keyword-rcmd-list";
-import {KeywordItem} from "./keyword-item";
 import KeywordNewsItemInSearch from "./keyword-news-item-in-search";
 
 
-export interface IKeywordNewsProps {
-  keywords: string[]
-}
 
 const KeywordNewsListInSearch = () => {
 

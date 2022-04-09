@@ -1,8 +1,7 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
+import React, {  useEffect, useRef, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
-import { Keyword } from '../../keyword/keyword';
 import {IKeywordProps} from "../keyword/keyword-rcmd-list";
 
 
@@ -43,7 +42,6 @@ const KeywordsModal = (props:IMainProps) => {
     checked:false
   });
 
-  const keywrd = checkItem;
 
   const onChange = e =>{
     const { value,checked } = e.target;
@@ -52,8 +50,6 @@ const KeywordsModal = (props:IMainProps) => {
       [checked] : checked,
       [value] : value
     });
-    console.log("checkItem : "+ value+" / checked : "+checked);
-    console.log(...checkItem.keywrd);
 
     if (checked === true ) {
       if(!parameterItem.includes(value)){

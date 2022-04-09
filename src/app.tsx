@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Redirect, Switch } from 'react-router-dom';
-import { IRootState } from 'shared/reducers';
-import ErrorBoundaryRoute from 'shared/error/error-boundary-route';
-import Login from './views/login/login';
+import { IRootState } from './shared/reducers';
+import ErrorBoundaryRoute from './shared/error/error-boundary-route';
 import './app.css';
 import Index from './shared/layout';
 import InitPage from './views/init-page';
 import axios from 'axios';
 import MindMapPage from './views/component/mindmap/mindmap_page';
+import {Login} from "./views/login";
 
 
 export enum LoginType {

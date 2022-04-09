@@ -1,7 +1,7 @@
-import React, { Component, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import { IRootState } from '../../../shared/reducers';
 import { connect } from 'react-redux';
-import { test01Redux, Test01State as test01State } from './test01-value-scope.reducer';
+import { test01Redux } from './test01-value-scope.reducer';
 
 // 리덕스/액션함수를 포함하는 인터페이스
 interface CustomProps { number; }

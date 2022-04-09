@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react';
-import GoogleLogin from 'react-google-login';
 import { connect } from 'react-redux';
 import { IRootState } from '../../shared/reducers';
-import {
-  KB_LOGO,
-} from '../img';
-import DashboardList from '../component/dashboard/dashboard-list';
 import SemanticContentsList from '../component/semantic/semantic-contents-list';
 
 
 export const SemanticContents = (props: any) => {
 
-  const [userObj, setUserObj]=React.useState({
-  })
 
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { FAILURE, REQUEST, SUCCESS } from 'shared/reducers/action-type.util';
+import { FAILURE, REQUEST, SUCCESS } from './../../shared/reducers/action-type.util';
 
 export const ACTION_TYPES = {
   LOGIN: 'authentication/LOGIN',

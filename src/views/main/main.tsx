@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../shared/reducers';
 import { connect } from 'react-redux';
-import NewsList,{ INewsListProps } from '../component/news/news-list';
-import KeywordRcmdList from '../component/keyword/keyword-rcmd-list'
 import {
   getRcmdKeyword,
   getKeywordNewsList, getSearchPlaceholder,
 } from '../../shared/reducers/api';
 import {
-  KB_LOGO,
-  KB,
   SEARCH_DOT_RIGHT,
   SEARCH_DOT_LEFT,
   YOUTUBE,
@@ -21,7 +17,7 @@ import {
   NEWS,
   COMMUNITY, CHANNEL_IMG,
 } from '../../views/img';
-import { INews, RcmdKwdJsonType } from '../../shared/model/news.model';
+import { INews } from '../../shared/model/news.model';
 import NewsDetailModal from '../component/popup/news-contents-view';
 import InitPage from '../init-page';
 
@@ -31,7 +27,6 @@ export interface IMainProps extends StateProps, DispatchProps {}
 export const Main = (props: IMainProps) => {
 
   const [modalShow, setModalShow] = React.useState(false);
-  const [rcmdKeywords, setRcmdKeywords] = useState([]);
   const [childItem, setChildItem] = React.useState(
     {
       id : "",
@@ -44,12 +39,7 @@ export const Main = (props: IMainProps) => {
   );
 
   const keywords:string[] = [
-    "KB국민카드"
-    // "KB Pay",
-    // "고객정보 유출",
-    // "신용카드 추천",
-    // "대박 상품",
-    // "해외 직구"
+    "card"
   ];
 
   const [orderedList, setOrderedList] = useState([]);
@@ -63,15 +53,12 @@ export const Main = (props: IMainProps) => {
     await props.getRcmdKeyword();
 
     const keys = new Array<string>(...props.rcmdKeywords.keywordList||[]);
-    // setRcmdKeywords(keys);
     console.log("rcmdkwd keywordList1 : "+ keys);
 
     await props.getKeywordNewsList(keywords);
 
   }
 
-  const jsonObjParse=()=>{
-  }
 
   useEffect(() => {
     if( props.newsList.length == 0 )
@@ -94,8 +81,8 @@ export const Main = (props: IMainProps) => {
             <div className="row mx-md-3">
               <div className="col-12">
                 <div className="main-title">
-                  <img src={}/>
-                    <h3>KB PAY관련 핫이슈는?</h3>
+                  {/*<img src={'/'}/>*/}
+                    <h3>What is main issue</h3>
                 </div>
             </div>
 

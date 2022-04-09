@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../shared/reducers';
 import { connect } from 'react-redux';
-import NewsList,{ INewsListProps } from '../component/news/news-list';
-import KeywordRcmdList from '../component/keyword/keyword-rcmd-list'
+import NewsList from '../component/news/news-list';
 import {getUserKeyword,
   getKeywordNewsList,
   getRcmdKeyword
 } from '../../shared/reducers/api';
 import {
-  KB_LOGO,
-  KB,
   YOUTUBE,
   FACEBOOK,
   INSTAGRAM,

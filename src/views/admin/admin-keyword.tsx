@@ -2,23 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { IRootState } from '../../shared/reducers';
 import { INewsListProps as Props } from '../component/news/news-list';
 import { connect } from 'react-redux';
-import NewsList,{ INewsListProps } from '../component/news/news-list';
 import {
         getKeywordNewsList,
         } from '../../shared/reducers/api';
-// import {
-//   KB_LOGO,
-//   KB,
-//   YOUTUBE,
-//   FACEBOOK,
-//   INSTAGRAM,
-//   TWITTER,
-//   NAVER,
-//   BLOG,
-//   NEWS,
-//   COMMUNITY, CHANNEL_IMG,
-// } from '../../views/img';
-// import NewsDetailModal from "../component/popup/news-contents-view";
+
 
 export interface IAdminDshbrdProps extends StateProps, DispatchProps {}
 

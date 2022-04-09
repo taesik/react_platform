@@ -6,7 +6,6 @@ const Search: React.FC =() => {
   const onSubmit: React.FormEventHandler<HTMLFormElement> =(e)=>{
     e.preventDefault();
 
-    //submit시 action을 dispatch 할꺼임
 
 
   }

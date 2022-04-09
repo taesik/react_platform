@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import ErrorBoundaryRoute from '../../shared/error/error-boundary-route';
-// import Charts from './charts';
 import Language from './language';
 import Test from './test';
 

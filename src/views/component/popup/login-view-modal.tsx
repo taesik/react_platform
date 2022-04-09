@@ -1,6 +1,5 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import SwichButton from '../button/swichButton';
+import React from 'react';
+import {  Modal } from 'react-bootstrap';
 
 
 const LoginViewModal = (props) => {

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../shared/reducers';
 import ErrorBoundaryRoute from '../error/error-boundary-route';
 import { Router, Switch } from 'react-router-dom';
 import Main from '../../views/main/main';
 import '../../assets/libs/bootstrap/bootstrap.min.css';
 import '../../assets/libs/bootstrap/bootstrap-icon.min.css';
 import '../../assets/css/styles.css';
-import { Login } from '../../views/login/login';
+import { Login } from '../../../src/views/login';
 import { Dashboard } from '../../views/dashboard/dashboard';
 import { SearchResults } from '../../views/result/search-result';
 import { MainTmp } from '../../views/main/mainTmp';

@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { IRootState } from '../../shared/reducers';
-import { INewsListProps as Props } from '../component/news/news-list';
 import { connect } from 'react-redux';
-import NewsList,{ INewsListProps } from '../component/news/news-list';
 import {
         getKeywordNewsList,
         } from '../../shared/reducers/api';
-import {
-  KB_LOGO,
-  KB,
-  YOUTUBE,
-  FACEBOOK,
-  INSTAGRAM,
-  TWITTER,
-  NAVER,
-  BLOG,
-  NEWS,
-  COMMUNITY, CHANNEL_IMG,
-} from '../../views/img';
-import NewsDetailModal from "../component/popup/news-contents-view";
-import KeywordsModal from "../component/popup/keywords-modal";
+
 import EnrollDshBrdModal from "../component/popup/enroll-dashboard-modal";
 
 export interface IAdminDshbrdProps extends StateProps, DispatchProps {
@@ -86,7 +71,7 @@ export const AdminDashBrd = (props:IAdminDshbrdProps) => {
                   <li>2020-12-31</li>
                 </ul>
                 <p className="tag">
-                  <span>#KB국민카드</span><span>#KB국민카드</span>
+                  <span>#</span><span>#</span>
                 </p>
               </div>
             </div>
@@ -116,7 +101,6 @@ const mapStateToProps = ({ api }: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  // getKeyword,
   getKeywordNewsList
 };
 

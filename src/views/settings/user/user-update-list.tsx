@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { connect } from 'react-redux';
-import { IRootState } from 'shared/reducers';
+import { IRootState } from './../../../shared/reducers';
 import { getSettingUserUpdateList } from './user.reducer';
 import Pager from '../../component/pager/Pager';
 import moment from 'moment';

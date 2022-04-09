@@ -1,17 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from '../../shared/reducers';
-import {
-  KB_LOGO,
-} from '../img';
 import AnalysisReportList from '../component/report/analysis-report-list';
 
 
 export const AnalysisReport = (props ) => {
 
-  useEffect(() => {
-
-  }, []);
 
 
   const moveAnalysisReportDetail = () => {
