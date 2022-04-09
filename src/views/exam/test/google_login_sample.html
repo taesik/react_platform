@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="google-signin-client_id" content="577378410885-3jbeii269bfv7fa08dq7u9gtrodeatbr.apps.googleusercontent.com">
+   <title>Oauth2.0 Google</title>
+
+   <!-- Google libaray -->
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+   <!--Jquery library to print the information easier -->
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+/**
+- OAuth Client 정보
+. client id : 770668449686-i5mf4epsaabqdae419c9cpsrlo9g4rq7.apps.googleusercontent.com
+. client secret : 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
+-  참고자료
+. [google developer doc] 웹 앱에 구글 로그인 통합 https://developers.google.com/identity/sign-in/web/sign-in
+. [google developer doc] 맞춤 버튼 적용 https://developers.google.com/identity/sign-in/web/build-button
+*/
+
+<body>
+   <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+   <div id="my-signin2"></div>
+   <button type="button" class="btn btn-danger" onclick="signOut();">Sign out</button>
+   <div id="profileinfo"></div>
+
+   <script>
+      function onSignIn(googleUser) {
+         var profile = googleUser.getBasicProfile();
+         $("#profileinfo").empty();
+         $("#profileinfo").append("<b>"+ profile.getName() + " has logged in.</b><br>");
+         $("#profileinfo").append("Full Name : "+ profile.getName()+"<br>");
+         $("#profileinfo").append("Given Name : " + profile.getGivenName()+"<br>");
+         $("#profileinfo").append("Family Name : "+profile.getFamilyName()+"<br>");
+         $("#profileinfo").append("ID : "+ profile.getId()+"<br>");
+         $("#profileinfo").append("Image Url : " + profile.getImageUrl()+"<br>");
+         $("#profileinfo").append("Email : "+ profile.getEmail());
+      }
+      function onFailure(error){
+         console.logg(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope':'profile email',
+          'width' :240,
+          'height' :50,
+          'longtitle':true,
+          'theme':'dark',
+          'onsuccess':onSignIn,
+          'onfailure':onFailure
+        });
+      }
+   </script>
+   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+   </br>
+   <script>
+      function signOut() {
+         var auth2 = gapi.auth2.getAuthInstance();
+         auth2.signOut().then(function(){
+            console.log('User signed out.');
+            $("#profileinfo").empty();
+            $("#profileinfo").append("<h2>Signed out</h2>");
+         });
+      }
+   </script>
+</body>
+
+</html>

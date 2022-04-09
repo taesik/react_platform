@@ -1,4 +1,4 @@
-import { isPromise } from 'shared/util/promise-utils';
+import { isPromise } from './../shared/util/promise-utils';
 import { toast } from 'react-toastify';
 
 const addErrorAlert = (message, key?, data?) => {
