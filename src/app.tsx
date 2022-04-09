@@ -26,51 +26,47 @@ export const App = (props: IAppProps) => {
     connectionPath : string
   }
 
-  type LoginJSON = {
-    isOK : boolean,
-  }
+  // type LoginJSON = {
+  //   isOK : boolean,
+  // }
+  //
+  // type UserInfoJSON = {
+  //   isLogin : boolean,
+  //   userInfo : {
+  //     id: string
+  //   },
+  // }
 
-  type UserInfoJSON = {
-    isLogin : boolean,
-    userInfo : {
-      id: string
-    },
-  }
 
-  useEffect(()=>{
-    getUserInfoFunc();
-    initIpEnvir();
 
-  },[loginType.isGetType])
+  // const initIpEnvir=()=>{
+  //   if(isLogin===false){
+  //     axios.post('/login/connectionPath')
+  //       .then(function(response) {
+  //         let jsonStr:string = JSON.stringify(response.data)
+  //         let type:LoginTypeJSON = JSON.parse(jsonStr);
+  //         console.log("LOGIN TYPE : "+ type.connectionPath);
+  //         let ltype:string = getLoginType(type.connectionPath);
+  //         setLoginType({type:ltype,isGetType:true});
+  //         console.log(`loginType : ${loginType.type} / isGetLoginType : ${loginType.isGetType}`);
+  //       })
+  //   }
+  // }
 
-  const initIpEnvir=()=>{
-    if(isLogin===false){
-      axios.post('/login/connectionPath')
-        .then(function(response) {
-          let jsonStr:string = JSON.stringify(response.data)
-          let type:LoginTypeJSON = JSON.parse(jsonStr);
-          console.log("LOGIN TYPE : "+ type.connectionPath);
-          let ltype:string = getLoginType(type.connectionPath);
-          setLoginType({type:ltype,isGetType:true});
-          console.log(`loginType : ${loginType.type} / isGetLoginType : ${loginType.isGetType}`);
-        })
-    }
-  }
-
-  const getUserInfoFunc =()=>{
-    if(isLogin===false){
-      axios.post('/login/getUserInfo')
-        .then(function(response) {
-          console.log(response.data)
-          let jsonStr:string = JSON.stringify(response.data)
-          let info:UserInfoJSON = JSON.parse(jsonStr);
-          setIsLogin(info.isLogin);
-          if(info.userInfo !== null)
-            setUserNo(info.userInfo.id);
-          // console.log(`info.isLogin : ${info.isLogin} / info.userInfo.id : ${info.userInfo.id}`);
-        })
-    }
-  }
+  // const getUserInfoFunc =()=>{
+  //   if(isLogin===false){
+  //     axios.post('/login/getUserInfo')
+  //       .then(function(response) {
+  //         console.log(response.data)
+  //         let jsonStr:string = JSON.stringify(response.data)
+  //         let info:UserInfoJSON = JSON.parse(jsonStr);
+  //         setIsLogin(info.isLogin);
+  //         if(info.userInfo !== null)
+  //           setUserNo(info.userInfo.id);
+  //         // console.log(`info.isLogin : ${info.isLogin} / info.userInfo.id : ${info.userInfo.id}`);
+  //       })
+  //   }
+  // }
 
   const getLoginType = (type:string) => {
     switch (type) {
@@ -85,8 +81,6 @@ export const App = (props: IAppProps) => {
 
   return (
     <>
-      {
-        isLogin ?
           <Switch>
             <ErrorBoundaryRoute path={["/main",
                                       "/dashboard",
@@ -101,24 +95,19 @@ export const App = (props: IAppProps) => {
             <Redirect from="/" to={"/main"} />
 
           </Switch>
-          :
-          loginType.isGetType ?
             <Switch>
 
             <ErrorBoundaryRoute path="/mindmap" component={MindMapPage} />
             <ErrorBoundaryRoute path="/login" component={Login} />
-            <Redirect from="/" to={
-              {pathname: "/login",
-                state: {loginType:loginType.type,
-                  isLogin:isLogin,
-                  userNo:userNo
-                }
-              }
-            }  />
+            {/*<Redirect from="/" to={*/}
+            {/*  {pathname: "/login",*/}
+            {/*    state: {loginType:loginType.type,*/}
+            {/*      isLogin:isLogin,*/}
+            {/*      userNo:userNo*/}
+            {/*    }*/}
+            {/*  }*/}
+            {/*}  />*/}
             </Switch>
-            :
-            <InitPage/>
-      }
     </>
   );
 }

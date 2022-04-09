@@ -93,7 +93,7 @@ export const Header = (props:IHeaderProps) => {
 
                 <div className="col-12">
                   <div className="my-box">
-                    <h5>나의 키워드<span className="edit">edit</span></h5>
+                    <h5>나의 키워드</h5>
                     <div className="keyword-box">
                       <span>#</span><span>19</span><span></span><span>#</span><span>#</span>
                     </div>

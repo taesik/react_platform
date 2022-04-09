@@ -12,7 +12,7 @@ const AnalysisReportItem = (props: { moveFunc }) => {
       <div className="col">
         <div className="card radius-2" onClick={moveAnalysisReportDetail}>
 
-          <img className="c-badge" src="img/icon/hot.png" />
+          {/*<img className="c-badge" src="img/icon/hot.png" />*/}
           <div className="c-switch">
             <input id="11" className="checkbox-toggle toggle-switch" type="checkbox"/>
             <label htmlFor="11" data-on="ON" data-off="OFF"></label>
