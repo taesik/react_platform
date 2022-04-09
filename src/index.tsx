@@ -1,13 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
+import { bindActionCreators } from 'redux';
+import { BrowserRouter } from 'react-router-dom';
+
 import './index.css';
-import App from './App';
+import App from './app';
+import initStore from './config/store';
 import reportWebVitals from './reportWebVitals';
+import ErrorBoundary from "./shared/error/error-boundary";
+import { clearAuthentication } from './shared/reducers/authentication';
+import setupAxiosInterceptors from './config/axios-interceptor';
+import { loadIcons } from './config/icon-loader';
+import { initPublish } from './init-publish';
+import { hideLoading, showLoading } from './shared/reducers/axios';
+import { getSearchPlaceholder,
+
+        getRcmdKeyword} from './shared/reducers/api';
+
+const store = initStore(); // 스토어 셋팅
+
+// 사용자 세션 확인 및 초기화
+const actions = bindActionCreators({
+                                                showLoading,
+                                                hideLoading,
+                                                }, store.dispatch);
+
+setupAxiosInterceptors(actions);
+loadIcons(); // fontawesome 셋팅
+initPublish(); // 퍼블리싱 코드 초기화
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ErrorBoundary>
+    <Provider store={store}>
+      <BrowserRouter>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </BrowserRouter>
+    </Provider>
+  </ErrorBoundary>,
   document.getElementById('root')
 );
 
